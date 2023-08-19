@@ -1,2 +1,36 @@
-# HASS_Ryobi_GDO
-Component for Home Assistant that allows for controlling the light and door of the Ryobi GDO garage door opener.
+# Ryobi GDO Custom Component for Home Assistant
+
+## First and foremost:
+
+The overwhelming majority of the work was done by [guillaume1410](https://community.home-assistant.io/u/guillaume1410/).  At this point the only changes made have been cleaning up some of the code, the files, and adding control of the light.  More may come in the future but at this point, the functionality is there.
+
+## Getting your door id:
+
+To get your door id, download and run the doorid.py file using Python.  Make sure to edit the username and password variables in the script beforehand.  You'll also need to install the requests module using pip.
+
+## Installation:
+
+Put this in your custom_components folder under ryobi_gdo3 and restart Home Assistant.
+
+## Configuration.yaml example:
+```
+cover:
+  - platform: ryobi_gdo3
+    username: !secret ryobi_username
+    password: !secret ryobi_password
+    device_id:
+      - !secret ryobi_device_id
+      
+light:
+  - platform: ryobi_gdo3
+    username: !secret ryobi_username
+    password: !secret ryobi_password
+    device_id:
+      - !secret ryobi_device_id
+```	  
+## Secrets.yaml example:
+```
+ryobi_username: "user@name.com"
+ryobi_password: "password"
+ryobi_device_id: "51324637f136474"
+```
