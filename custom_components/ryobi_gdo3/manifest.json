@@ -1,0 +1,8 @@
+{
+  "domain": "ryobi_gdo3",
+  "name": "ryobi_gdo3",
+  "version": "0.6.1",
+  "documentation": "https://github.com/VandolinHimself/HASS_Ryobi_GDO",
+  "dependencies": [],
+  "codeowners": ["@VandolinHimself"]
+}
